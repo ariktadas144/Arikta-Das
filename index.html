@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Arikta Das · AI/ML Engineer · Open-Source Contributor</title>
+<meta name="description" content="Arikta Das — AI/ML Engineer and Open-Source Contributor. B.Tech CSE @ VIT. NLP pipelines, multimodal systems, full-stack tools." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="no-scroll">
+
+<!-- ===================== LOADER ===================== -->
+<div id="loader">
+  <div class="loader-stage">
+    <div class="loader-cloud c1"></div>
+    <div class="loader-cloud c2"></div>
+    <div class="loader-cloud c3"></div>
+    <div class="loader-spark" style="left:14%;"></div>
+    <div class="loader-spark" style="left:11%; animation-delay:.35s;"></div>
+    <div class="loader-spark" style="left:17%; animation-delay:.7s;"></div>
+    <svg class="loader-flag" viewBox="0 0 22 60" fill="none">
+      <rect x="10" y="0" width="2" height="60" fill="#6b7382"/>
+      <g>
+        <rect x="12" width="5" height="5" fill="#eef2f7"/><rect x="17" width="5" height="5" fill="#0a0c11"/>
+        <rect x="12" y="5" width="5" height="5" fill="#0a0c11"/><rect x="17" y="5" width="5" height="5" fill="#eef2f7"/>
+        <rect x="12" y="10" width="5" height="5" fill="#eef2f7"/><rect x="17" y="10" width="5" height="5" fill="#0a0c11"/>
+      </g>
+    </svg>
+    <div class="loader-kart">
+      <svg viewBox="0 0 74 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="37" cy="41" rx="32" ry="3" fill="#22e6ff" opacity=".18"/>
+        <path d="M8 30 h10 l6-12 h20 l8 12 h14 v8 a3 3 0 0 1-3 3 H11 a3 3 0 0 1-3-3 z" fill="url(#kartGrad)"/>
+        <path d="M24 18 h20 l4 8 H21 z" fill="#0a0c11" opacity=".35"/>
+        <circle cx="19" cy="38" r="7" fill="#0a0c11"/><circle cx="19" cy="38" r="3" fill="#a7b0bf"/>
+        <circle cx="55" cy="38" r="7" fill="#0a0c11"/><circle cx="55" cy="38" r="3" fill="#a7b0bf"/>
+        <rect x="4" y="24" width="8" height="5" rx="2" fill="#a855f7"/>
+        <defs>
+          <linearGradient id="kartGrad" x1="8" y1="18" x2="66" y2="41" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#22e6ff"/><stop offset=".55" stop-color="#6c8cff"/><stop offset="1" stop-color="#a855f7"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="loader-road-line"></div>
+  </div>
+  <div class="loader-caption">
+    <div class="loader-title">Warming up the engine — <span class="grad-text font-mono">arikta.das</span></div>
+    <div class="loader-bar-track"><div class="loader-bar-fill" id="loaderBarFill"></div></div>
+    <div class="loader-pct font-mono" id="loaderPct">0%</div>
+  </div>
+</div>
+
+<canvas id="neuralCanvas"></canvas>
+<div class="bg-wash"></div>
+<div class="grain"></div>
+
+<nav class="nav" id="siteNav">
+  <a href="#home" class="nav-logo">arikta<span class="dim">.</span><span class="brand-das">das</span></a>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <div class="nav-links font-mono" id="navLinks">
+    <a href="#home">home</a>
+    <a href="#experience">experience</a>
+    <a href="#education">education</a>
+    <a href="#skills">skills</a>
+    <a href="#projects">projects</a>
+    <a href="#certificates">certifications</a>
+    <a href="#contact">contact</a>
+  </div>
+  <div class="nav-right">
+    <a href="https://github.com/ariktadas144" target="_blank" rel="noopener" class="nav-icon" aria-label="GitHub">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.34.9 11.6c0 5 3.24 9.24 7.75 10.74.57.1.78-.25.78-.55v-2.03c-3.15.68-3.82-1.36-3.82-1.36-.51-1.3-1.26-1.65-1.26-1.65-1.03-.71.08-.7.08-.7 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.51-.28-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.5-1.46.11-3.04 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.74 0c2.19-1.47 3.15-1.16 3.15-1.16.61 1.58.23 2.75.11 3.04.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.17 5.59.41.36.77 1.05.77 2.12v3.14c0 .3.21.66.79.55A10.63 10.63 0 0 0 23.1 11.6C23.1 5.34 18.27.5 12 .5Z"/></svg>
+    </a>
+    <a href="https://linkedin.com/in/arikta-das" target="_blank" rel="noopener" class="nav-icon" aria-label="LinkedIn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.68H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+    </a>
+    <a href="Arikta_Das_Resume.pdf" download class="nav-resume">resume
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 4v13m0 0-5-5m5 5 5-5M5 20h14"/></svg>
+    </a>
+  </div>
+</nav>
+
+<div class="page-shell">
+
+  <!-- HERO -->
+  <section class="hero wrap" id="home">
+    <h1 class="h-display reveal">Arikta<span class="hero-dot">.</span>&nbsp;Das</h1>
+    <div class="role-line font-mono reveal">Software Engineer&nbsp;<span class="role-sep">|</span>&nbsp;AI, ML &amp; Agentic Systems</div>
+    <p class="intro reveal">I design and ship intelligent systems end to end — fine-tuning transformer pipelines, building multimodal retrieval architectures, and orchestrating autonomous agentic workflows that turn research into production-ready AI.</p>
+    <div class="hero-cta reveal">
+      <a href="#projects" class="btn btn-primary">View Projects →</a>
+      <a href="Arikta_Das_Resume.pdf" class="btn btn-ghost" download>Download Resume</a>
+    </div>
+    <div class="hero-social reveal">
+      <a href="https://github.com/ariktadas144" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.34.9 11.6c0 5 3.24 9.24 7.75 10.74.57.1.78-.25.78-.55v-2.03c-3.15.68-3.82-1.36-3.82-1.36-.51-1.3-1.26-1.65-1.26-1.65-1.03-.71.08-.7.08-.7 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.51-.28-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.5-1.46.11-3.04 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.74 0c2.19-1.47 3.15-1.16 3.15-1.16.61 1.58.23 2.75.11 3.04.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.17 5.59.41.36.77 1.05.77 2.12v3.14c0 .3.21.66.79.55A10.63 10.63 0 0 0 23.1 11.6C23.1 5.34 18.27.5 12 .5Z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/arikta-das" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.68H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+      </a>
+      <a href="mailto:ariktadas144@gmail.com" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.3 7.8 6.1 7.8-6.1H4.2Zm15.6 1.5-7.36 5.76a1 1 0 0 1-1.28 0L4 7.3v11.2c0 .17.13.3.3.3h15.4a.3.3 0 0 0 .3-.3V7.3Z"/></svg>
+      </a>
+    </div>
+    <div class="scroll-tick"></div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section wrap" id="experience">
+    <div class="section-label reveal">01 — Experience</div>
+    <h2 class="section-title h-display reveal">Where I've been <span class="grad-text">building.</span></h2>
+    <div class="timeline reveal-stagger">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="when">May 2026 — Present</div>
+        <h3>AI/ML Intern</h3>
+        <div class="org">GWC Data.ai · Kolkata, IN</div>
+        <ul>
+          <li>Built and benchmarked 3 transformer-based classification pipelines (BERT, DistilBERT, RoBERTa) in PyTorch &amp; TensorFlow — up to 91% F1 on internal sentiment benchmarks.</li>
+          <li>Designed end-to-end NLP preprocessing and evaluation pipelines using Hugging Face Transformers — tokenization, batching, and sequence-level metrics.</li>
+          <li>Engineered Streamlit dashboards for model predictions, confidence scores, and failure-case visualizations — reduced stakeholder review cycles by ~40%.</li>
+          <li>Authored reproducible experimental workflows via structured config management.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="when">May 2026 — Present</div>
+        <h3>Open-Source Contributor</h3>
+        <div class="org">GirlScript Summer of Code (GSSoC'26) · Arnio — Python ML data library</div>
+        <ul>
+          <li>Merged PR #1005 — designed <code>ArFrame.schema</code> summary with a memory-efficient <code>ColumnSummary</code> class.</li>
+          <li>Enabled zero-overhead schema inspection on ML dataframes; eliminated pandas round-trip overhead in preprocessing pipelines.</li>
+          <li>Authored 30 automated tests covering correctness, edge cases, namespace exports, and regression safety.</li>
+          <li>Achieved a full pass rate across the project's 1,255-test suite (0 failures) — production-grade reliability.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- EDUCATION -->
+  <section class="section wrap" id="education">
+    <div class="section-label reveal">02 — Education</div>
+    <h2 class="section-title h-display reveal">Built on <span class="grad-text">fundamentals.</span></h2>
+    <div class="edu-grid reveal-stagger">
+      <div class="card edu-card">
+        <div class="when">Jul 2024 — May 2028</div>
+        <h3>Vellore Institute of Technology (VIT)</h3>
+        <div class="place">Vellore, India</div>
+        <div class="degree">B.Tech — Computer Science &amp; Engineering (CSE Core)</div>
+        <div class="detail">Relevant coursework: Data Structures &amp; Algorithms, Object-Oriented Programming, Computer Programming (Python &amp; Java).</div>
+      </div>
+      <div class="card edu-card">
+        <div class="when">Apr 2024</div>
+        <h3>Delhi Public School Megacity</h3>
+        <div class="place">Kolkata, India</div>
+        <div class="degree">Class XII (ISC) — PCM + Computer Science</div>
+        <div class="detail">Class X (ICSE) completed at the same institution.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- SKILLS -->
+  <section class="section wrap" id="skills">
+    <div class="section-label reveal">03 — Skills</div>
+    <h2 class="section-title h-display reveal">The <span class="grad-text">stack.</span></h2>
+    <div class="skills-grid reveal-stagger" id="skillsGrid"></div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- PROJECTS -->
+  <section class="section wrap" id="projects">
+    <div class="section-label reveal">04 — Projects</div>
+    <h2 class="section-title h-display reveal">Things I've <span class="grad-text">shipped.</span></h2>
+    <div class="proj-grid reveal-stagger" id="projGrid"></div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- CERTIFICATES -->
+  <section class="section wrap" id="certificates">
+    <div class="section-label">05 — Certifications</div>
+    <h2 class="section-title h-display">Verified <span class="grad-text">learning.</span></h2>
+    <div class="card cert-card">
+      <div class="cert-badge">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.6"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4Z"/><path d="m9 12 2 2 4-4" stroke="var(--violet)"/></svg>
+      </div>
+      <div>
+        <h3>Supervised Machine Learning: Regression and Classification</h3>
+        <div class="issuer">Andrew Ng · Coursera</div>
+        <p>Implemented linear regression, logistic regression, and regularization from scratch in Python — reinforcing probability and optimization fundamentals.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- CONTACT -->
+  <section class="section wrap" id="contact">
+    <div class="contact-grid">
+      <div class="contact-copy reveal">
+        <div class="section-label">06 — Contact</div>
+        <h2 class="section-title h-display">Let's engineer <span class="grad-text">the future.</span></h2>
+        <p>Open to AI/ML internships, full-stack roles, and ambitious open-source collaborations. Drop a message — I read everything.</p>
+        <div class="contact-rows">
+          <div class="card contact-row">
+            <div class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Z"/><path d="m3 6 9 7 9-7"/></svg></div>
+            <div><span class="lbl">Email</span><a class="val" href="mailto:ariktadas144@gmail.com">ariktadas144@gmail.com</a></div>
+          </div>
+          <div class="card contact-row">
+            <div class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
+            <div><span class="lbl">Phone</span><a class="val" href="tel:+917604078295">+91 76040-78295</a></div>
+          </div>
+        </div>
+        <div class="contact-btn-row">
+          <a href="https://github.com/ariktadas144" target="_blank" rel="noopener" class="pill-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.34.9 11.6c0 5 3.24 9.24 7.75 10.74.57.1.78-.25.78-.55v-2.03c-3.15.68-3.82-1.36-3.82-1.36-.51-1.3-1.26-1.65-1.26-1.65-1.03-.71.08-.7.08-.7 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.51-.28-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.5-1.46.11-3.04 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.74 0c2.19-1.47 3.15-1.16 3.15-1.16.61 1.58.23 2.75.11 3.04.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.17 5.59.41.36.77 1.05.77 2.12v3.14c0 .3.21.66.79.55A10.63 10.63 0 0 0 23.1 11.6C23.1 5.34 18.27.5 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/arikta-das" target="_blank" rel="noopener" class="pill-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.68H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+            LinkedIn
+          </a>
+          <a href="Arikta_Das_Resume.pdf" download class="pill-btn solid">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 4v13m0 0-5-5m5 5 5-5M5 20h14"/></svg>
+            Resume
+          </a>
+        </div>
+      </div>
+
+      <form class="card contact-form-card reveal" id="contactForm">
+        <div class="field-row">
+          <div>
+            <label class="field-label" for="cf-name">Your name</label>
+            <input class="field" id="cf-name" type="text" name="name" placeholder="Jane Recruiter" required />
+          </div>
+          <div>
+            <label class="field-label" for="cf-email">Email</label>
+            <input class="field" id="cf-email" type="email" name="email" placeholder="you@company.com" required />
+          </div>
+        </div>
+        <label class="field-label" for="cf-subject">Subject</label>
+        <input class="field" id="cf-subject" type="text" name="subject" placeholder="Internship opportunity at …" />
+        <label class="field-label" for="cf-message">Message</label>
+        <textarea class="field" id="cf-message" name="message" placeholder="Tell me about the role, the team, what excites you about the work…" required></textarea>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
+        <div class="form-msg" id="formMsg"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">arikta<span class="dim">.</span><span class="brand-das">das</span></a>
+        <p>Building intelligent systems and shipping production code. Always learning.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Navigate</div>
+        <div class="footer-links">
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Connect</div>
+        <div class="footer-social">
+          <a href="https://github.com/ariktadas144" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.34.9 11.6c0 5 3.24 9.24 7.75 10.74.57.1.78-.25.78-.55v-2.03c-3.15.68-3.82-1.36-3.82-1.36-.51-1.3-1.26-1.65-1.26-1.65-1.03-.71.08-.7.08-.7 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.51-.28-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.5-1.46.11-3.04 0 0 .96-.31 3.15 1.16a10.9 10.9 0 0 1 5.74 0c2.19-1.47 3.15-1.16 3.15-1.16.61 1.58.23 2.75.11 3.04.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.17 5.59.41.36.77 1.05.77 2.12v3.14c0 .3.21.66.79.55A10.63 10.63 0 0 0 23.1 11.6C23.1 5.34 18.27.5 12 .5Z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/arikta-das" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.68H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+          </a>
+          <a href="mailto:ariktadas144@gmail.com" aria-label="Email">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.3 7.8 6.1 7.8-6.1H4.2Zm15.6 1.5-7.36 5.76a1 1 0 0 1-1.28 0L4 7.3v11.2c0 .17.13.3.3.3h15.4a.3.3 0 0 0 .3-.3V7.3Z"/></svg>
+          </a>
+        </div>
+        <div class="footer-email">ariktadas144@gmail.com</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Arikta Das — built with intent.</span>
+      <span>Vellore, India</span>
+    </div>
+  </footer>
+</div>
+
+<button id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
